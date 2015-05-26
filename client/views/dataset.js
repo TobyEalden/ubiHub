@@ -24,7 +24,7 @@ Template.datasetsView.onRendered(function() {
       {
         view: "toolbar",
         elements: [
-          { view: "label", template: "<div class='picoHeader'><span class='picoHeaderTitle'>nqminds &mdash; live feed diagnostics</span>"},
+          { view: "label", width: 300, template: "<div class='picoHeader'><span class='picoHeaderTitle'>nqm &mdash; feed diagnostics</span>"},
           {},
           {view:"label", template: "<div style='text-align: right;'>diag.user</div>" },
           {view:"icon", icon:"user"},
