@@ -130,20 +130,20 @@ Template.datasetsView.onRendered(function() {
   };
   this.ui = webix.ui(ui);
 
-  this.autorun(function() {
-    var feed = Session.get("SIGFOX-GFTDesignEnviroMon01-850C"); //ubiDataFeeds["SIGFOX-GFTDesignEnviroMon-01"];
-    if (feed) {
-      feed = ubiDataFeeds["5564f6f9dac9cf5b3020d4dd"];
-      feed.find().observe({
-        changed: function() {
-          var mapped = feed.find().fetch().map(function(i) { return { timestamp: new Date(i.msg.time*1000), counter: i.deviceData.counter, temperature: i.deviceData.temperature, photoPercent: i.deviceData.photoPercent } });
-          $$("feedTable").clearAll();
-          $$("feedTable").parse(mapped);
-          Session.get("SIGFOX-GFTDesignEnviroMon01-850C",false);
-        }
-      });
-    }
-  });
+  //this.autorun(function() {
+  //  var feed = Session.get("SIGFOX-GFTDesignEnviroMon01-850C"); //ubiDataFeeds["SIGFOX-GFTDesignEnviroMon-01"];
+  //  if (feed) {
+  //    feed = ubiDataFeeds["5564f6f9dac9cf5b3020d4dd"];
+  //    feed.find().observe({
+  //      changed: function() {
+  //        var mapped = feed.find().fetch().map(function(i) { return { timestamp: new Date(i.msg.time*1000), counter: i.deviceData.counter, temperature: i.deviceData.temperature, photoPercent: i.deviceData.photoPercent } });
+  //        $$("feedTable").clearAll();
+  //        $$("feedTable").parse(mapped);
+  //        Session.get("SIGFOX-GFTDesignEnviroMon01-850C",false);
+  //      }
+  //    });
+  //  }
+  //});
 });
 
 Template.datasetsView.onDestroyed(function() {
