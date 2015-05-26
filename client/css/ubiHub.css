@@ -1,1 +1,15 @@
 /* CSS declarations go here */
+
+.picoHeader {
+    background-image: url(images/logo.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 55px;
+}
+
+.picoHeaderTitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-left: 104px;
+    padding-top: 25px;
+}

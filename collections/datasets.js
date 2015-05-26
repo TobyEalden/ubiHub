@@ -1,6 +1,5 @@
-"use strict";
 
-this.ubiDatasets = new Meteor.Collection(ubiDatasetsName);
+ubiDatasets = new Meteor.Collection(ubiDatasetsName);
 
 var addDataFeed = function(descriptor) {
   if (!ubiDataFeeds.hasOwnProperty(descriptor)) {
