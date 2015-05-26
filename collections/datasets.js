@@ -1,7 +1,7 @@
 
 ubiDatasets = new Meteor.Collection(ubiDatasetsName);
 
-var addDataset = function(descriptor, name) {
+addDataset = function(descriptor, name) {
   var doc = ubiDatasets.findOne({ descriptor: descriptor });
   if (!doc) {
     doc = ubiDatasets.insert({ descriptor: descriptor, name: name, created: Date.now() });
