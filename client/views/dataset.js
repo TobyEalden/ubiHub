@@ -51,7 +51,7 @@ Template.datasetsView.onRendered(function() {
                   url: webix.proxy("meteor", ubiDatasets.find()),
                   select: true,
                   on: {
-                    onAfterLoad: function() { var self = this; setTimeout(function() { self.select("PRqoi8H4SfR8ic7sB");},1000); },
+                    onAfterLoad: function() { var self = this; setTimeout(function() { self.select("5564f6f9dac9cf5b3020d4dd");},1000); },
                     onSelectChange: function(val) {
                       var mapped = ubiDataFeeds[val].find().fetch().map(function(i) { return { timestamp: new Date(i.msg.time*1000), counter: i.deviceData.counter, temperature: i.deviceData.temperature, photoPercent: i.deviceData.photoPercent } });
                       $$("feedTable").clearAll();
@@ -133,7 +133,7 @@ Template.datasetsView.onRendered(function() {
   this.autorun(function() {
     var feed = Session.get("SIGFOX-GFTDesignEnviroMon01-850C"); //ubiDataFeeds["SIGFOX-GFTDesignEnviroMon-01"];
     if (feed) {
-      feed = ubiDataFeeds["PRqoi8H4SfR8ic7sB"];
+      feed = ubiDataFeeds["5564f6f9dac9cf5b3020d4dd"];
       feed.find().observe({
         changed: function() {
           var mapped = feed.find().fetch().map(function(i) { return { timestamp: new Date(i.msg.time*1000), counter: i.deviceData.counter, temperature: i.deviceData.temperature, photoPercent: i.deviceData.photoPercent } });
